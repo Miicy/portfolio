@@ -4,10 +4,16 @@ import { ReactComponent as DividerAboutUpside } from "../../media/divider-upside
 import text from "../../media/text.json";
 import wordFile from "../../media/CV.pdf";
 import { useState } from "react";
-import "./layout.css"
+import "./layout.css";
+import { isMobile } from "react-device-detect";
+import { useMediaQuery } from "@mui/material";
+import { selectAnimation } from "../../store/reducers/animationSlice";
+import { useSelector } from "react-redux";
 
 function AboutMe() {
 	const [scrollPosition, setScrollPosition] = useState(0);
+	const isScreenSmall = useMediaQuery("(max-width: 400px)");
+	const animation = useSelector(selectAnimation);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -23,14 +29,19 @@ function AboutMe() {
 	useEffect(() => {
 		const scrollToShowAboutMe = 200;
 		const aboutMeContainer = document.getElementById("about-me-container");
-		if (aboutMeContainer) {
-			if (scrollPosition >= scrollToShowAboutMe) {
-				aboutMeContainer.style.display = "flex";
-			} else {
-				aboutMeContainer.style.display = "none";
+		if (isScreenSmall || isMobile || !animation) {
+			aboutMeContainer.style.display = "flex";
+		} else {
+			if (aboutMeContainer) {
+				if (scrollPosition >= scrollToShowAboutMe) {
+					aboutMeContainer.style.display = "flex";
+				} else {
+					aboutMeContainer.style.display = "none";
+				}
 			}
 		}
 	}, [scrollPosition]);
+
 
 	return (
 		<div id="about-me-container" className="about-me-container">
@@ -38,12 +49,12 @@ function AboutMe() {
 				<DividerAbout className="divider" />
 				<div className="about-me-content-container">
 					<p className="heading-smaller">- ABOUT ME -</p>
-					<p>{text.text}</p>
+					<p className="about-me-p">{text.text}</p>
 					<a href={wordFile} download="Resume.pdf" className="links resume">
 						Download Resume
 					</a>
 				</div>
-				<DividerAboutUpside className="divider"/>
+				<DividerAboutUpside className="divider" />
 			</div>
 		</div>
 	);

@@ -10,33 +10,49 @@
 
 .header > * {
 	color: black;
+	transition: 0.3s;
 }
 
 .heading {
 	font-size: 2em;
 	font-weight: bold;
 	margin: 15px 0 0;
+	transition: 0.3s;
 }
 .heading-smaller {
 	font-size: 1.5em;
 	font-weight: bold;
 	margin: 15px 0 0;
+	transition: 0.3s;
 }
 
 .heading2 {
 	font-size: 1.2em;
 	margin: 0px 5px;
 	font-style: italic;
+	transition: 0.3s;
 }
 .heading-right-container {
 	display: flex;
+	margin-right:10px;
+	transition: 0.3s;
 }
-
+.heading-right-menu{
+	position: absolute;
+	right:5px;
+	top:50px;
+	animation: myAnim 1s ease 0s 1 normal forwards;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 .links {
 	font-size: 1.2em;
 	margin: 0 20px;
 	position: relative;
 	font-weight: 500;
+	transition: 0.3s;
 }
 
 .links:hover {
@@ -68,7 +84,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 100px;
+	margin-top: 150px;
+	transition: 0.3s;
 }
 
 .inner-footer {
@@ -78,6 +95,7 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	transition: 0.3s;
 }
 
 .copied {
@@ -95,24 +113,56 @@
 	animation: myAnim 0.5s ease 0s 1 normal forwards;
 }
 
-
-@media (max-width: 950px) {
+@media (max-width: 1200px) {
+	.header > *{
+		margin-left:10px;
+	}
+}
+@media (max-width: 900px) {
+	.inner-footer{
+		flex-direction: column;
+	}
+	.footer{
+		height: 200px;
+	}
+	.links {
+		font-size: 1em;
+		margin: 5px 10px;
+	}
+	.header > *{
+		font-size: 0.9em;
+	}
+	
 }
 
-@media (max-width: 750px) {
-}
+
 
 @media (max-width: 400px) {
+	.heading{
+		font-size: 1.3em;
+		margin-left: 5px;
+		right:0;
+	}
+	.heading-right-container {
+		right:5,
+	}
 	.links {
 		font-size: 0.7em;
-		margin: 0 5px;
+		margin: 5px 5px;
 	}
-	.heading,
-	.heading-smaller {
-		font-size: 1.1em;
-		margin-left: 5px;
-	}
+
 	.heading2 {
 		font-size: 0.8em;
 	}
+	.inner-footer{
+		flex-direction: column;
+	}
+	.footer{
+		height: 160px;
+	}
+	.links-menu{
+		font-size: 0.7em;
+		margin: 5px 5px;
+	}
+
 }

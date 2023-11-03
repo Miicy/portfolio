@@ -7,7 +7,6 @@
 	width: 100%;
 	height: 600px;
 	z-index: 50;
-
 }
 
 .about-me {
@@ -43,7 +42,7 @@
 .portfolio {
 	max-width: 100%;
 	min-height: 600px;
-	height:fit-content;
+	height: fit-content;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -63,7 +62,6 @@
 	justify-items: center;
 	align-items: center;
 	transition-delay: 0.2s;
-	
 }
 
 .item-container {
@@ -74,19 +72,18 @@
 	position: relative;
 	cursor: pointer;
 	transition: box-shadow 100ms ease-out;
-	border:1px solid rgba(0, 0, 0, 0.2);
-	display:flex;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	transition: 0.3s;
 }
 
 .item-container:hover {
 	box-shadow: 1px 1px 10px 5px rgba(119, 89, 117, 0.82);
 	animation: myAnim2 0.5s ease 0s 1 normal forwards;
-
 }
-
 
 @keyframes myAnim {
 	0% {
@@ -116,14 +113,50 @@
 	}
 }
 
+@media (max-width: 800px) {
+	.inner-portfolio{
+		max-width: 750px;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		grid-gap: 10px 20px;
+	}
+	.item-container{
+		min-width: 100px;
+		width:200px;
+		height:200px
+	}
+}
+
 @media (max-width: 750px) {
 	.about-me-container {
 		margin-top: -50px;
 	}
 }
+@media (max-width: 670px) {
+	.inner-portfolio{
+		max-width: 550px;
+		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+		grid-gap: 10px 15px;
+	}
+	.item-container{
+		min-width: 100px;
+		width:150px;
+		height:200px
+	}
+}
+
 @media (max-width: 550px) {
 	.about-me-content-container {
 		font-size: 0.8em;
+	}
+	.inner-portfolio{
+		max-width: 450px;
+		grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+		grid-gap: 10px 20px;
+	}
+	.item-container{
+		min-width: 100px;
+		width:120px;
+		height:150px
 	}
 }
 
@@ -133,5 +166,18 @@
 	}
 	.about-me-content-container {
 		font-size: 0.7em;
+	}
+	.about-me-p {
+		font-size: 0.9em;
+	}
+	.inner-portfolio{
+		max-width: 400px;
+		grid-template-columns: repeat(auto-fill, minmax(115px, 1fr));
+		grid-gap: 5px 5px;
+	}
+	.item-container{
+		min-width: 100px;
+		width:100px;
+		height:160px
 	}
 }

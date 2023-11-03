@@ -1,31 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../pages/pages.css";
-import { Divider } from "@mui/material";
+import { Divider, useMediaQuery } from "@mui/material";
+import { isMobile } from "react-device-detect";
+import MenuIcon from "@mui/icons-material/Menu";
+import { setAnimationFalse } from "../../store/reducers/animationSlice";
+import { useDispatch } from "react-redux";
+
 function Header() {
-	function scrollToPosition(yPosition) {
+	const isScreenSmall = useMediaQuery("(max-width: 400px)");
+	const dispatch = useDispatch();
+
+	function scrollToPosition(scrollPosition) {
 		window.scrollTo({
-		  top: yPosition,
-		  behavior: "smooth",
+			top: scrollPosition,
+			behavior: "smooth",
 		});
-	  }
-	
-	  function handleAboutMeClick() {
-		const aboutMeSectionY = 800; 
-	
-		scrollToPosition(aboutMeSectionY);
-	  }
+	}
 
-	  function handlePortfolioClick() {
-		const aboutMeSectionY = 1800; 
-	
-		scrollToPosition(aboutMeSectionY);
-	  }
+	const [isMenuOpen, setMenuOpen] = useState(false);
 
-	  function handlePortfolioContact() {
-		const aboutMeSectionY = 2200; 
-	
-		scrollToPosition(aboutMeSectionY);
-	  }
+	function menuClick() {
+		setMenuOpen(!isMenuOpen);
+	}
+
+	function handleAboutMeClick() {
+		let scrollPosition;
+
+		if (isScreenSmall || isMobile) {
+			scrollPosition = 400;
+		} else {
+			scrollPosition = 800;
+		}
+
+		scrollToPosition(scrollPosition);
+	}
+
+	function handlePortfolioClick() {
+		let scrollPosition;
+
+		if (isScreenSmall || isMobile) {
+			scrollPosition = 1200;
+		} else {
+			scrollPosition = 1800;
+		}
+
+		scrollToPosition(scrollPosition);
+		dispatch(setAnimationFalse(false));
+	}
+
+	function handleContactClick() {
+		let scrollPosition;
+
+		if (isScreenSmall || isMobile) {
+			scrollPosition = 2000;
+		} else {
+			scrollPosition = 2000;
+		}
+
+		scrollToPosition(scrollPosition);
+		dispatch(setAnimationFalse(false));
+	}
+
+	const dividerStyles = { border: "0.5px solid black" };
 
 	return (
 		<div className="header">
@@ -33,15 +69,40 @@ function Header() {
 				<p className="heading">Milica Pantelic</p>
 				<p className="heading2">Web developer</p>
 			</div>
-			<div className="heading-right-container">
-				<p className="links" onClick={handleAboutMeClick}>
-					About me
-				</p>
-				<Divider orientation="vertical" flexItem sx={{border:"0.5px solid black",}}/>
-				<p className="links"  onClick={handlePortfolioClick}>Portfolio</p>
-				<Divider orientation="vertical" flexItem sx={{border:"0.5px solid black",}}/>
-				<p className="links"  onClick={handlePortfolioContact}>Contact</p>
-			</div>
+			{isScreenSmall || isMobile ? (
+				<div className="heading-right-container">
+					<MenuIcon sx={{ cursor: "pointer" }} onClick={menuClick} />
+					{isMenuOpen && (
+						<div className="heading-right-menu">
+							<p className="links-menu" onClick={handleAboutMeClick}>
+								About me
+							</p>
+							<Divider orientation="vertical" flexItem sx={dividerStyles} />
+							<p className="links-menu" onClick={handlePortfolioClick}>
+								Portfolio
+							</p>
+							<Divider orientation="vertical" flexItem sx={dividerStyles} />
+							<p className="links-menu" onClick={handleContactClick}>
+								Contact
+							</p>
+						</div>
+					)}
+				</div>
+			) : (
+				<div className="heading-right-container">
+					<p className="links" onClick={handleAboutMeClick}>
+						About me
+					</p>
+					<Divider orientation="vertical" flexItem sx={dividerStyles} />
+					<p className="links" onClick={handlePortfolioClick}>
+						Portfolio
+					</p>
+					<Divider orientation="vertical" flexItem sx={dividerStyles} />
+					<p className="links" onClick={handleContactClick}>
+						Contact
+					</p>
+				</div>
+			)}
 		</div>
 	);
 }
