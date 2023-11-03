@@ -1,17 +1,15 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, RouterProvider, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
 
 function App() {
 	return (
-		<BrowserRouter>
+		<RouterProvider>
 			<Routes>
 				<Route path="/" element={<Home />} />
 			</Routes>
-			{/* <LoadingModal />
-				<NotificationContainer /> */}
-		</BrowserRouter>
+		</RouterProvider>
 	);
 }
 
