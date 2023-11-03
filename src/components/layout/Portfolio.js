@@ -36,7 +36,7 @@ function Portfolio() {
 				aboutMeContainer.style.display = "none";
 			}
 		}}
-	}, [scrollPosition]);
+	}, [scrollPosition,animation,isScreenSmall]);
 
 
 	return (

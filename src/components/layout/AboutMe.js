@@ -40,7 +40,7 @@ function AboutMe() {
 				}
 			}
 		}
-	}, [scrollPosition]);
+	}, [scrollPosition,animation,isScreenSmall]);
 
 
 	return (

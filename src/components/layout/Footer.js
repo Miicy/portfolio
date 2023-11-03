@@ -1,4 +1,4 @@
-import { Divider, useMediaQuery} from "@mui/material";
+import { Divider} from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
