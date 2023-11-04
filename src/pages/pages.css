@@ -37,7 +37,7 @@
 }
 .heading-right-menu {
 	position: absolute;
-	right: 5px;
+	right: 20px;
 	top: 60px;
 	animation: myAnim 1s ease 0s 1 normal forwards;
 	display: flex;
@@ -84,7 +84,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 150px;
+	margin-top: 250px;
 	transition: 0.3s;
 }
 
@@ -132,7 +132,7 @@
 		justify-content: space-around;
 	}
 	.footer {
-		height: 250px;
+		height: 270px;
 	}
 	.links {
 		font-size: 1em;

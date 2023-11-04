@@ -27,9 +27,9 @@ function Header() {
 		let scrollPosition;
 
 		if (isScreenSmall || isMobile) {
-			scrollPosition = 550;
+			scrollPosition = 710;
 		} else {
-			scrollPosition = 950;
+			scrollPosition = 1050;
 		}
 
 		scrollToPosition(scrollPosition);
@@ -39,9 +39,9 @@ function Header() {
 		let scrollPosition;
 
 		if (isScreenSmall || isMobile) {
-			scrollPosition = 1400;
+			scrollPosition = 1550;
 		} else {
-			scrollPosition = 1900;
+			scrollPosition = 2000;
 		}
 
 		scrollToPosition(scrollPosition);
@@ -54,7 +54,7 @@ function Header() {
 		if (isScreenSmall || isMobile) {
 			scrollPosition = 2000;
 		} else {
-			scrollPosition = 2300;
+			scrollPosition = 2400;
 		}
 
 		scrollToPosition(scrollPosition);

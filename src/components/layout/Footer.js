@@ -1,9 +1,7 @@
 import { Divider} from "@mui/material";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 function Footer() {
-	const navigate = useNavigate();
 	const [isLinkCopied, setIsLinkCopied] = useState(false);
 	const [isLinkCopied2, setIsLinkCopied2] = useState(false);
 	const [isLinkCopied3, setIsLinkCopied3] = useState(false);
@@ -48,7 +46,7 @@ function Footer() {
 	return (
 		<div className="footer">
 			<div className="inner-footer">
-				<div className="links" onClick={() => navigate("/gitlink")}>
+				<div className="links" onClick={() => window.location.href = "https://github.com/Miicy"}>
 					Git: Miicy
 				</div>
 				<Divider
