@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import image from "../../media/webshop.png";
 
 function ItemContainer({ item, template }) {
 	const [isHovered, setIsHovered] = useState(false);
-	const navigate = useNavigate();
 
 	const handleMouseEnter = () => setIsHovered(true);
 	const handleMouseLeave = () => setIsHovered(false);
@@ -13,9 +12,9 @@ function ItemContainer({ item, template }) {
 
 	const handleItemClick = () => {
 		if (isItemValid) {
-			navigate(`/${item.link}`);
+			window.location.href = item.link;
 		} else if (isTemplateValid) {
-			navigate(`/${template.link}`);
+			window.location.href = template.link;
 		}
 	};
 
@@ -25,17 +24,31 @@ function ItemContainer({ item, template }) {
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
 			onClick={handleItemClick}
-			style={{
-				backgroundImage: item
-					? `url(${item.image})`
-					: template
-					? `url(${template.image})`
-					: "none",
-			}}
 		>
-			<div>
-				{isHovered && item && <p>{item.title}</p>}
-				{isHovered && template && <p>{template.title}</p>}
+			<div
+				className="item-inner-container"
+				style={{
+					backgroundImage: item
+						? `url(${item.image})`
+						: template
+						? `url(${template.image})`
+						: "none",
+					backgroundSize: "cover",
+					backgroundPosition: " top ",
+					backgroundRepeat: "no-repeat",
+					filter: isHovered ? "blur(0px)" : "blur(0.5px)",
+				}}
+			>
+				{isHovered && item && (
+					<div className="item-hover">
+						<p className="item-hover-p">{item.title}</p>
+					</div>
+				)}
+				{isHovered && template && (
+					<div className="item-hover">
+						<p className="item-hover-p">{template.title}</p>
+					</div>
+				)}
 			</div>
 		</div>
 	);

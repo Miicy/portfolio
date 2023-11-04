@@ -1,19 +1,19 @@
 {
-    "templates": [
-      {
-        "title": "Item 1",
-        "omage": "item1.jpg",
-        "link": "s"
-      },
-      {
-        "title": "Item 2",
-        "image": "item2.jpg",
-        "link": "s"
-      },
-      {
-        "title": "Item 3",
-        "image": "item3.jpg",
-        "link": "s"
-      }
-    ]
-  }
+	"templates": [
+		{
+			"title": "RPG Login",
+			"omage": "item1.jpg",
+			"link": "s"
+		},
+		{
+			"title": "Techwear Homepage",
+			"image": "item2.jpg",
+			"link": "s"
+		},
+		{
+			"title": "Item 3",
+			"image": "item3.jpg",
+			"link": "s"
+		}
+	]
+}
