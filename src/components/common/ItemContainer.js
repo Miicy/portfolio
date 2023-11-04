@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import image from "../../media/webshop.png";
+// import image from "../../media/webshop.png";
 
 function ItemContainer({ item, template }) {
 	const [isHovered, setIsHovered] = useState(false);
