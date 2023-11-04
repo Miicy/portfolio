@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useMediaQuery } from "@mui/material";
+import { isMobile } from "react-device-detect";
+import { useSelector } from "react-redux";
+import { selectAnimation } from "../../store/reducers/animationSlice";
 import itemData from "../../media/portfolio.json";
 import templateData from "../../media/templates.json";
 import ItemContainer from "../common/ItemContainer";
-import { useMediaQuery } from "@mui/material";
-import { isMobile } from "react-device-detect";
-import { selectAnimation } from "../../store/reducers/animationSlice";
-import { useSelector } from "react-redux";
+
 
 function Portfolio() {
 	const [scrollPosition, setScrollPosition] = useState(0);

@@ -9,7 +9,7 @@
 	z-index: 50;
 }
 
-.about-me {
+.about-me-inner {
 	height: 100%;
 	max-width: 1000px;
 	border-radius: 30px;
@@ -19,11 +19,11 @@
 	align-items: center;
 }
 
-.divider {
+.about-me-divider {
 	width: 90%;
 	animation: myAnim 1s ease 0s 1 normal forwards;
 }
-.about-me-content-container {
+.about-me-p-container {
 	height: 85%;
 	display: flex;
 	flex-direction: column;
@@ -113,15 +113,15 @@
 }
 
 @media (max-width: 800px) {
-	.inner-portfolio{
+	.inner-portfolio {
 		max-width: 750px;
 		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 		grid-gap: 10px 20px;
 	}
-	.item-container{
+	.item-container {
 		min-width: 100px;
-		width:200px;
-		height:200px
+		width: 200px;
+		height: 200px;
 	}
 }
 
@@ -131,60 +131,60 @@
 	}
 }
 @media (max-width: 670px) {
-	.inner-portfolio{
+	.inner-portfolio {
 		max-width: 550px;
 		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 		grid-gap: 10px 15px;
 	}
-	.item-container{
+	.item-container {
 		min-width: 100px;
-		width:150px;
-		height:200px
+		width: 150px;
+		height: 200px;
 	}
 }
 
 @media (max-width: 550px) {
-	.about-me{
+	.about-me-inner {
 		margin-top: 300px;
 		height: 700px;
 	}
-	.about-me-content-container {
+	.about-me-p-container {
 		font-size: 0.8em;
 		height: 80%;
 	}
-	.inner-portfolio{
+	.portfolio {
+		margin-top: 350px;
+	}
+	.inner-portfolio {
 		max-width: 450px;
 		grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
 		grid-gap: 10px 20px;
 	}
-	.item-container{
+	.item-container {
 		min-width: 100px;
-		width:110px;
-		height:150px
-	}
-	.portfolio{
-		margin-top: 350px;
+		width: 110px;
+		height: 150px;
 	}
 }
 
 @media (max-width: 400px) {
-	.about-me-content-container {
+	.about-me-p-container {
 		font-size: 0.7em;
 	}
 	.about-me-p {
 		font-size: 0.9em;
 	}
-	.inner-portfolio{
+	.portfolio {
+		margin-top: 350px;
+	}
+	.inner-portfolio {
 		max-width: 400px;
 		grid-template-columns: repeat(auto-fill, minmax(115px, 1fr));
 		grid-gap: 5px 5px;
 	}
-	.item-container{
+	.item-container {
 		min-width: 100px;
-		width:100px;
-		height:160px
-	}
-	.portfolio{
-		margin-top: 350px;
+		width: 100px;
+		height: 160px;
 	}
 }

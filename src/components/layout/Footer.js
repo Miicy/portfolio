@@ -1,81 +1,68 @@
-import { Divider} from "@mui/material";
+import { Divider } from "@mui/material";
 import React, { useState } from "react";
 
 function Footer() {
-	const [isLinkCopied, setIsLinkCopied] = useState(false);
-	const [isLinkCopied2, setIsLinkCopied2] = useState(false);
-	const [isLinkCopied3, setIsLinkCopied3] = useState(false);
+	const [isLinkCopied, setIsLinkCopied] = useState({
+		1: false,
+		2: false,
+		3: false,
+		null: false,
+	});
 
-	const copyToClipboard = (text) => {
+	const copyToClipboard = (text, key) => {
 		const textArea = document.createElement("textarea");
 		textArea.value = text;
 		document.body.appendChild(textArea);
 		textArea.select();
 		document.execCommand("copy");
 		document.body.removeChild(textArea);
-		if(text=== "milica.pantelic.14@gmail.com"){
-			setIsLinkCopied(true);
-		}else if(text=== "+381 691408997"){
-			setIsLinkCopied2(true);
-		}else{
-			setIsLinkCopied3(true);
-		}
-		
-	  };
-	
-	  const handleCopyEmail = () => {
-		copyToClipboard("milica.pantelic.14@gmail.com");
+		setIsLinkCopied({ ...isLinkCopied, [key]: true });
+
 		setTimeout(() => {
-		  setIsLinkCopied(false);
+			setIsLinkCopied({ ...isLinkCopied, [key]: false });
 		}, 2000);
+	};
+
+	const handleCopy = (text, key) => {
+		copyToClipboard(text, key);
+	};
+
+	const handleOpenLink = (url) => {
+		window.location.href = url; 
 	  };
-	
-	  const handleCopyPhone = () => {
-		copyToClipboard("+381 691408997");
-		setTimeout(() => {
-		  setIsLinkCopied2(false);
-		}, 2000);
-	  };
-	
-	  const handleCopyDiscord = () => {
-		copyToClipboard("Miicy"); 
-		setTimeout(() => {
-		  setIsLinkCopied3(false);
-		}, 2000);
-	  };
+
 	return (
 		<div className="footer">
 			<div className="inner-footer">
-				<div className="links" onClick={() => window.location.href = "https://github.com/Miicy"}>
-					Git: Miicy
-				</div>
-				<Divider
-					orientation="vertical"
-					flexItem
-					sx={{ border: "0.5px solid black" }}
-				/>
-				<div className="links" onClick={handleCopyDiscord}>
-					Discord: Miicy
-					{isLinkCopied3 && <div className="copied"> Discord Copied!</div>}
-				</div>
-				<Divider
-					orientation="vertical"
-					flexItem
-					sx={{ border: "0.5px solid black" }}
-				/>
-				<div className="links" onClick={handleCopyPhone}>
-					Phone: +381 691408997
-					{isLinkCopied2 && <div className="copied"> Phone Copied!</div>}
-				</div>
-				<Divider
-					orientation="vertical"
-					flexItem
-					sx={{ border: "0.5px solid black" }}
-				/>
-				<div className="links" onClick={handleCopyEmail}  style={{ textDecoration: 'none'}}>
-					Gmail: milica.pantelic.14@gmail.com
-					{isLinkCopied && <div className="copied"> Email Copied!</div>}
-				</div>
+				{[
+					{ text: "Git: Miicy", key: null, url: "https://github.com/Miicy" },
+					{ text: "Discord: Miicy", key: 3 },
+					{ text: "Phone: +381 691408997", key: 2 },
+					{ text: "Gmail: milica.pantelic.14@gmail.com", key: 1 },
+				].map((item, index) => (
+					<React.Fragment key={index}>
+						{index > 0 && (
+							<Divider
+								orientation="vertical"
+								flexItem
+								sx={{ border: "0.5px solid black" }}
+							/>
+						)}
+						<div
+							className="links"
+							onClick={() => {
+								if (item.url) {
+									handleOpenLink(item.url);
+								} else {
+									handleCopy(item.text, item.key);
+								}
+							}}
+						>
+							{item.text}
+							{isLinkCopied[item.key] && <div className="copied"> Copied!</div>}
+						</div>
+					</React.Fragment>
+				))}
 			</div>
 		</div>
 	);

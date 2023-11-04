@@ -1,14 +1,14 @@
+import "./layout.css";
 import React, { useEffect } from "react";
+import { useState } from "react";
+import { useMediaQuery } from "@mui/material";
+import { isMobile } from "react-device-detect";
+import { useSelector } from "react-redux";
+import { selectAnimation } from "../../store/reducers/animationSlice";
 import { ReactComponent as DividerAbout } from "../../media/divider.svg";
 import { ReactComponent as DividerAboutUpside } from "../../media/divider-upside.svg";
 import text from "../../media/text.json";
 import wordFile from "../../media/CV.pdf";
-import { useState } from "react";
-import "./layout.css";
-import { isMobile } from "react-device-detect";
-import { useMediaQuery } from "@mui/material";
-import { selectAnimation } from "../../store/reducers/animationSlice";
-import { useSelector } from "react-redux";
 
 function AboutMe() {
 	const [scrollPosition, setScrollPosition] = useState(0);
@@ -46,22 +46,20 @@ function AboutMe() {
 
 	return (
 		<div id="about-me-container" className="about-me-container">
-			<div className="about-me">
-				<DividerAbout className="divider" />
-				<div className="about-me-content-container">
+			<div className="about-me-inner">
+				<DividerAbout className="about-me-divider" />
+				<div className="about-me-p-container">
 					<p className="heading-smaller">- ABOUT ME -</p>
 					<p className="about-me-p">
 						{textArray.map((line, index) => (
-							<p className="about-me-p" key={index}>
-								{line}
-							</p>
+							<p key={index}>{line}</p>
 						))}
 					</p>
 					<a href={wordFile} download="Resume.pdf" className="links resume">
 						Download Resume
 					</a>
 				</div>
-				<DividerAboutUpside className="divider" />
+				<DividerAboutUpside className="about-me-divider"/>
 			</div>
 		</div>
 	);
