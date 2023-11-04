@@ -5,7 +5,7 @@ function VideoMicy() {
 
   return (
     <div style={{zIndex: 1}}>
-      <video autoPlay muted loop id="Video" src={video}>
+      <video autoPlay playsInline muted loop id="Video" src={video}>
         Your browser does not support the video tag.
       </video>
     </div>

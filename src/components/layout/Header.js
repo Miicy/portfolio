@@ -27,9 +27,9 @@ function Header() {
 		let scrollPosition;
 
 		if (isScreenSmall || isMobile) {
-			scrollPosition = 400;
+			scrollPosition = 550;
 		} else {
-			scrollPosition = 800;
+			scrollPosition = 950;
 		}
 
 		scrollToPosition(scrollPosition);
@@ -39,9 +39,9 @@ function Header() {
 		let scrollPosition;
 
 		if (isScreenSmall || isMobile) {
-			scrollPosition = 1200;
+			scrollPosition = 1400;
 		} else {
-			scrollPosition = 1800;
+			scrollPosition = 1900;
 		}
 
 		scrollToPosition(scrollPosition);
@@ -54,7 +54,7 @@ function Header() {
 		if (isScreenSmall || isMobile) {
 			scrollPosition = 2000;
 		} else {
-			scrollPosition = 2000;
+			scrollPosition = 2300;
 		}
 
 		scrollToPosition(scrollPosition);
@@ -71,7 +71,7 @@ function Header() {
 			</div>
 			{isScreenSmall || isMobile ? (
 				<div className="heading-right-container">
-					<MenuIcon sx={{ cursor: "pointer" }} onClick={menuClick} />
+					<MenuIcon sx={{ cursor: "pointer", fontSize:"2em" }} onClick={menuClick} />
 					{isMenuOpen && (
 						<div className="heading-right-menu">
 							<p className="links-menu" onClick={handleAboutMeClick}>

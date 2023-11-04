@@ -1,150 +1,198 @@
-
 html {
 	scroll-behavior: smooth 3s;
 }
 body {
 	margin: 0;
-	font-family: 'Mukta', sans-serif;
+	font-family: "Mukta", sans-serif;
+	overflow: auto;
+	height: fit-content;
 }
 
 .overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
 	width: 100%;
 	height: 100vh;
 	background-image: linear-gradient(
 		to top,
 		#fff 0%,
-		rgba(156,141,155, 0.35) 74%,
+		rgba(156, 141, 155, 0.35) 69%,
 		rgba(119, 89, 117, 0.5) 100%
 	);
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
+	min-width: 300px;
 }
 .content {
-	margin-top: 50px;
 	max-width: 1000px;
-	min-width: 350px;
-	z-index: 10;
-}
-
-#Video {
-	margin-top: 150px;
-	object-fit: cover;
-	height: 100%;
-	width: 100%;
 	min-width: 300px;
 	z-index: 10;
 }
 
-.floor{
-	position:absolute;
-	margin-top: 589px;
+#Video {
+	margin-top: 141px;
+	object-fit: cover;
+	height: 100%;
 	width: 100%;
-	height:500px;
+	min-width: 280px;
+	z-index: 10;
+}
+
+.floor {
+	position: absolute;
+	margin-top: 630px;
+	width: 100%;
+	height: 500px;
 	background-image: linear-gradient(
 		to top,
 		#fff 0%,
-		rgba(245,210,168, 0.35) 70%,
+		rgba(245, 210, 168, 0.35) 70%,
 		rgba(214, 156, 110, 0.5) 100%
 	);
 	z-index: 5;
-	
+	min-width: 300px;
 }
 
-@media (max-width: 950px) {
-	.overlay{
-		background-image: linear-gradient(
-		to top,
-		#fff 0%,
-		rgba(156,141,155, 0.35) 68%,
-		rgba(119, 89, 117, 0.5) 100%
-	);
-	}
-	.floor {
-		background-image: linear-gradient(
-		to top,
-		#fff 0%,
-		rgba(245,210,168, 0.35) 80%,
-		rgba(214, 156, 110, 0.5) 100%
-	);
-	}
-  }
-
-  @media (max-width: 750px) {
-	.overlay{
-		background-image: linear-gradient(
-		to top,
-		#fff 0%,
-		rgba(156,141,155, 0.35) 75%,
-		rgba(119, 89, 117, 0.5) 100%
-	);
-	}
-	.floor {
-		background-image: linear-gradient(
-		to top,
-		#fff 0%,
-		rgba(245,210,168, 0.45) 140%,
-		rgba(214, 156, 110, 0.5) 100%
-	);
-	margin-top: 500px;
-	}
-  }
-
-  
-  @media (max-width: 650px) {
-	.overlay{
-		background-image: linear-gradient(
-		to top,
-		#fff 0%,
-		rgba(156,141,155, 0.35) 70%,
-		rgba(119, 89, 117, 0.5) 110%
-	);
-	}
-	.floor {
-		background-image: linear-gradient(
-		to top,
-		#fff 5%,
-		rgba(245,210,168, 0.45) 153%,
-		rgba(214, 156, 110, 0.5) 100%
-	);
-	margin-top: 420px;
-	}
-  }
-
-
-  @media (max-width: 400px) {
-	.overlay{
-		background-image: linear-gradient(
-		to top,
-		#fff 0%,
-		rgba(156,141,155, 0.35) 76%,
-		rgba(119, 89, 117, 0.5) 100%
-	);
-	}
-	.floor {
-		background-image: linear-gradient(
-		to top,
-		#fff 5%,
-		rgba(245,210,168, 0.5) 230%,
-		rgba(214, 156, 110, 0.5) 100%
-	);
-	margin-top: 350px;
-	}
-  }
-
-  .overlay-page{
+.overlay-page {
 	background-image: linear-gradient(
 		to top,
 		#fff 5%,
-		rgba(245,210,168, 0.5) 230%,
+		rgba(245, 210, 168, 0.5) 6000%
 	);
-	margin-top: 800px;
-	min-height:1300px;
-	height:fit-content;
+	margin-top: 250px;
+	min-height: 1300px;
+	height: fit-content;
 	display: flex;
 	flex-direction: column;
-  }
+}
+
+@media (max-width: 950px) {
+	.overlay {
+		background-image: linear-gradient(
+			to top,
+			#fff 0%,
+			rgba(156, 141, 155, 0.35) 68%,
+			rgba(119, 89, 117, 0.5) 100%
+		);
+	}
+	.floor {
+		background-image: linear-gradient(
+			to top,
+			#fff 0%,
+			rgba(245, 210, 168, 0.35) 80%,
+			rgba(214, 156, 110, 0.5) 100%
+		);
+	}
+	.overlay-page {
+		margin-top: 150px;
+	}
+}
+
+@media (max-width: 900px) {
+	.overlay {
+		background-image: linear-gradient(
+			to top,
+			#fff 0%,
+			rgba(156, 141, 155, 0.35) 68%,
+			rgba(119, 89, 117, 0.5) 100%
+		);
+	}
+	.floor {
+		background-image: linear-gradient(
+			to top,
+			#fff 0%,
+			rgba(245, 210, 168, 0.35) 105%,
+			rgba(214, 156, 110, 0.5) 100%
+		);
+	}
+}
+
+@media (max-width: 750px) {
+	.overlay {
+		background-image: linear-gradient(
+			to top,
+			#fff 0%,
+			rgba(156, 141, 155, 0.35) 75%,
+			rgba(119, 89, 117, 0.5) 100%
+		);
+	}
+	.floor {
+		background-image: linear-gradient(
+			to top,
+			#fff 0%,
+			rgba(245, 210, 168, 0.45) 140%,
+			rgba(214, 156, 110, 0.5) 100%
+		);
+		margin-top: 500px;
+	}
+	.overlay-page {
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 650px) {
+	.overlay {
+		background-image: linear-gradient(
+			to top,
+			#fff 0%,
+			rgba(156, 141, 155, 0.35) 70%,
+			rgba(119, 89, 117, 0.5) 110%
+		);
+		height: 90vh;
+	}
+	.floor {
+		background-image: linear-gradient(
+			to top,
+			#fff 5%,
+			rgba(245, 210, 168, 0.45) 153%,
+			rgba(214, 156, 110, 0.5) 100%
+		);
+		margin-top: 420px;
+	}
+}
+@media (max-width: 500px) {
+	.overlay {
+		background-image: linear-gradient(
+			to top,
+			#fff 0%,
+			rgba(156, 141, 155, 0.35) 66%,
+			rgba(119, 89, 117, 0.5) 100%
+		);
+		height: 80vh;
+	}
+}
+@media (max-width: 420px) {
+	.overlay {
+		background-image: linear-gradient(
+			to top,
+			#fff 0%,
+			rgba(156, 141, 155, 0.35) 55%,
+			rgba(119, 89, 117, 0.5) 100%
+		);
+		height: 80vh;
+	}
+}
+
+@media (max-width: 400px) {
+	.overlay {
+		background-image: linear-gradient(
+			to top,
+			#fff 0%,
+			rgba(156, 141, 155, 0.35) 69%,
+			rgba(119, 89, 117, 0.5) 100%
+		);
+		height: 80vh;
+	}
+	.floor {
+		background-image: linear-gradient(
+			to top,
+			#fff 5%,
+			rgba(245, 210, 168, 0.5) 168%,
+			rgba(214, 156, 110, 0.5) 100%
+		);
+		margin-top: 350px;
+	}
+	.overlay-page {
+		margin-top: 0px;
+	}
+}

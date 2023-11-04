@@ -40,8 +40,9 @@ function AboutMe() {
 				}
 			}
 		}
-	}, [scrollPosition,animation,isScreenSmall]);
+	}, [scrollPosition, animation, isScreenSmall]);
 
+	const textArray = text.text.split("\n");
 
 	return (
 		<div id="about-me-container" className="about-me-container">
@@ -49,7 +50,13 @@ function AboutMe() {
 				<DividerAbout className="divider" />
 				<div className="about-me-content-container">
 					<p className="heading-smaller">- ABOUT ME -</p>
-					<p className="about-me-p">{text.text}</p>
+					<p className="about-me-p">
+						{textArray.map((line, index) => (
+							<p className="about-me-p" key={index}>
+								{line}
+							</p>
+						))}
+					</p>
 					<a href={wordFile} download="Resume.pdf" className="links resume">
 						Download Resume
 					</a>

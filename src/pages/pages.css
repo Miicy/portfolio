@@ -1,6 +1,4 @@
 .header {
-	position: absolute;
-	top: 0;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -34,15 +32,15 @@
 }
 .heading-right-container {
 	display: flex;
-	margin-right:10px;
+	margin-right: 10px;
 	transition: 0.3s;
 }
-.heading-right-menu{
+.heading-right-menu {
 	position: absolute;
-	right:5px;
-	top:50px;
+	right: 5px;
+	top: 60px;
 	animation: myAnim 1s ease 0s 1 normal forwards;
-	display:flex;
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -53,6 +51,7 @@
 	position: relative;
 	font-weight: 500;
 	transition: 0.3s;
+	text-decoration:none !important;
 }
 
 .links:hover {
@@ -79,6 +78,7 @@
 
 .footer {
 	width: 100%;
+	min-width: 300px;
 	background-color: rgb(119, 89, 117);
 	height: 150px;
 	display: flex;
@@ -114,37 +114,43 @@
 }
 
 @media (max-width: 1200px) {
-	.header > *{
-		margin-left:10px;
+	.heading {
+		margin-left: 10px;
+	}
+	.heading2 {
+		margin-left: 15px;
+	}
+	.heading-right-container {
+		margin-right: 15px;
 	}
 }
+
 @media (max-width: 900px) {
-	.inner-footer{
+	.inner-footer {
 		flex-direction: column;
+		height:80%;
+		justify-content: space-around;
 	}
-	.footer{
-		height: 200px;
+	.footer {
+		height: 250px;
 	}
 	.links {
 		font-size: 1em;
 		margin: 5px 10px;
 	}
-	.header > *{
+	.header > * {
 		font-size: 0.9em;
 	}
-	
 }
 
-
-
 @media (max-width: 400px) {
-	.heading{
+	.heading {
 		font-size: 1.3em;
 		margin-left: 5px;
-		right:0;
+		right: 0;
 	}
 	.heading-right-container {
-		right:5,
+		margin-right: 15px;
 	}
 	.links {
 		font-size: 0.7em;
@@ -153,16 +159,17 @@
 
 	.heading2 {
 		font-size: 0.8em;
+		margin-left: 10px;
 	}
-	.inner-footer{
+	.inner-footer {
 		flex-direction: column;
 	}
-	.footer{
-		height: 160px;
+	.footer {
+		height: 250px;
 	}
-	.links-menu{
+	.links-menu {
 		font-size: 0.7em;
 		margin: 5px 5px;
 	}
-
 }
+

@@ -13,11 +13,7 @@ function ItemContainer({ item, template }) {
           }
         };
 
-	// console.log(item);
-
-    // if (!item) return null;
-    // if (!template) return null;
-
+        
 	return (
 		<div
 			className="item-container"
