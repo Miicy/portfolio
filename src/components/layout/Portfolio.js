@@ -45,13 +45,13 @@ function Portfolio() {
 			<div className="heading-smaller"> - RECENT WORK -</div>
 			<div className="inner-portfolio">
 				{itemData.items.map((item, index) => (
-					<ItemContainer key={index} item={item} />
+					<ItemContainer key={index} item={item} index={index}/>
 				))}
 			</div>
 			<div className="heading-smaller"> - PAGE TEMPLATES -</div>
 			<div className="inner-portfolio">
 				{templateData.templates.map((template, index) => (
-					<ItemContainer key={index} template={template} />
+					<ItemContainer key={index} template={template} index={index}/>
 				))}
 			</div>
 		</div>

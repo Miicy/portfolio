@@ -2,7 +2,7 @@
 	"templates": [
 		{
 			"title": "RPG Login",
-			"omage": "item1.jpg",
+			"image": "item1.jpg",
 			"link": "s"
 		},
 		{

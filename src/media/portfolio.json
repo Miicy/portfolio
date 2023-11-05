@@ -2,17 +2,14 @@
     "items": [
       {
         "title": "Web Shop",
-        "image": "/portfolio/static/media/webshop.30a9eb978c631d0f7469.png",
         "link": "https://brutaltreningsuplementi.com/"
       },
       {
         "title": "Character Creator",
-        "image": "item2.jpg",
         "link": "a"
       },
       {
         "title": "News Frontend",
-        "image": "item3.jpg",
         "link": "a"
       }
     ]

@@ -37,6 +37,7 @@
 .resume {
 	color: black;
 	text-decoration: none;
+	margin-bottom: 15px;
 }
 
 .portfolio {
@@ -215,7 +216,7 @@
 		font-size: 0.7em;
 	}
 	.about-me-p {
-		font-size: 0.9em;
+		font-size: 0.85em;
 	}
 	.portfolio {
 		margin-top: 350px;
