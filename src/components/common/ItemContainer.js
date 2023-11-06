@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import image1 from "../../media/webshop.png";
-import image2 from "../../media/webshop.png";
+import template1 from "../../media/rpg.png";
 import image3 from "../../media/webshop.png";
 
 function ItemContainer({ item, template, index }) {
@@ -21,7 +21,7 @@ function ItemContainer({ item, template, index }) {
 	};
 
 	const portfolioImages = [image1, null, null];
-	const templateImages = [null, null, null];
+	const templateImages = [template1, null, null];
 
 	console.log(index);
 
