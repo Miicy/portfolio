@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import image1 from "../../media/webshop.png";
-import template1 from "../../media/rpg.png";
-import image3 from "../../media/webshop.png";
+import { useGetImages } from "../../helpers/useGetImages";
 
 function ItemContainer({ item, template, index }) {
+	
 	const [isHovered, setIsHovered] = useState(false);
 
 	const handleMouseEnter = () => setIsHovered(true);
@@ -19,11 +18,7 @@ function ItemContainer({ item, template, index }) {
 			window.location.href = template.link;
 		}
 	};
-
-	const portfolioImages = [image1, null, null];
-	const templateImages = [template1, null, null];
-
-	console.log(index);
+	const backgroundImage = useGetImages(item, template, index);
 
 	return (
 		<div
@@ -37,11 +32,7 @@ function ItemContainer({ item, template, index }) {
 			<div
 				className="item-inner-container"
 				style={{
-					backgroundImage: item
-						? `url(${portfolioImages[index]})`
-						: template
-						? `url(${templateImages[index]})`
-						: "none",
+					backgroundImage: `url(${backgroundImage})`,
 					backgroundSize: "cover",
 					backgroundPosition: " top ",
 					backgroundRepeat: "no-repeat",
