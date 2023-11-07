@@ -2,17 +2,14 @@
 	"templates": [
 		{
 			"title": "RPG Login",
-			"image": "item1.jpg",
-			"link": "s"
+			"link": "https://miicy.github.io/rpg-login/"
 		},
 		{
 			"title": "Techwear Homepage",
-			"image": "item2.jpg",
 			"link": "s"
 		},
 		{
 			"title": "Item 3",
-			"image": "item3.jpg",
 			"link": "s"
 		}
 	]
