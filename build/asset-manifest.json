@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ec41768b.css",
-    "main.js": "/static/js/main.891d3838.js",
+    "main.css": "./static/css/main.ec41768b.css",
+    "main.js": "./static/js/main.891d3838.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/webshop.png": "/static/media/webshop.30a9eb978c631d0f7469.png",
     "static/media/techwear.png": "/static/media/techwear.26f22697f6e83f05ada7.png",
