@@ -43,13 +43,13 @@ function Portfolio() {
 	return (
 		<div className="portfolio" id="portfolio-container">
 			<div className="heading-smaller"> - RECENT WORK -</div>
-			<div className="inner-portfolio">
+			<div className={itemData.items.length <= 2 ? 'inner-portfolio-less' : 'inner-portfolio'}>
 				{itemData.items.map((item, index) => (
 					<ItemContainer key={index} item={item} index={index}/>
 				))}
 			</div>
 			<div className="heading-smaller"> - PAGE TEMPLATES -</div>
-			<div className="inner-portfolio">
+			<div className={templateData.templates.length <= 2 ? 'inner-portfolio-less' : 'inner-portfolio'}>
 				{templateData.templates.map((template, index) => (
 					<ItemContainer key={index} template={template} index={index}/>
 				))}

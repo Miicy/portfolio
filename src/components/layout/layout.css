@@ -64,6 +64,17 @@
 	transition-delay: 0.2s;
 }
 
+.inner-portfolio-less {
+	margin-top: 70px;
+	margin-bottom: 50px;
+	max-width: 1000px;
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	transition-delay: 0.2s;
+}
+
 .item-container {
 	height: 250px;
 	min-width: 200px;
