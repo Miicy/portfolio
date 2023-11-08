@@ -52,7 +52,7 @@
 	animation: myAnim 1s ease 0s 1 normal forwards;
 }
 
-.inner-portfolio {
+.inner-portfolio{
 	margin-top: 70px;
 	margin-bottom: 50px;
 	max-width: 1000px;
@@ -64,7 +64,7 @@
 	transition-delay: 0.2s;
 }
 
-.inner-portfolio-less {
+.inner-portfolio-less{
 	margin-top: 70px;
 	margin-bottom: 50px;
 	max-width: 1000px;
