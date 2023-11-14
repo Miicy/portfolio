@@ -68,8 +68,9 @@
 	margin-top: 70px;
 	margin-bottom: 50px;
 	max-width: 1000px;
+	width: 550px;
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	justify-items: center;
 	align-items: center;
 	transition-delay: 0.2s;
