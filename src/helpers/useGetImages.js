@@ -3,7 +3,7 @@ import template1 from "../media/images/rpg.png";
 import template2 from "../media/images/techwear.png";
 
 export function useGetImages(item, template, index) {
-	const portfolioImages = [image1, null, null];
+	const portfolioImages = [null, image1, null];
 	const templateImages = [template1, template2, null];
 	if (item) {
 		return portfolioImages[index] || "none";

@@ -1,6 +1,10 @@
 {
     "items": [
       {
+        "title": "News Feature & Admin Panel",
+        "link": "https://news-9eb28.web.app/news"
+      },
+      {
         "title": "Web Shop",
         "link": "https://brutaltreningsuplementi.com/"
       }
