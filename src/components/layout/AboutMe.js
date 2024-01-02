@@ -8,7 +8,7 @@ import { selectAnimation } from "../../store/reducers/animationSlice";
 import { ReactComponent as DividerAbout } from "../../media/divider.svg";
 import { ReactComponent as DividerAboutUpside } from "../../media/divider-upside.svg";
 import text from "../../media/text.json";
-import wordFile from "../../media/CV.pdf";
+import wordFile from "../../media/CV-English.pdf";
 
 function AboutMe() {
 	const [scrollPosition, setScrollPosition] = useState(0);
