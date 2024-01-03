@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.d61c5d64.css",
-    "main.js": "/portfolio/static/js/main.14554321.js",
+    "main.js": "/portfolio/static/js/main.144f250a.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/webshop.png": "/portfolio/static/media/webshop.30a9eb978c631d0f7469.png",
     "static/media/techwear.png": "/portfolio/static/media/techwear.26f22697f6e83f05ada7.png",
     "static/media/news.png": "/portfolio/static/media/news.2e1aff1f6e92e917f4a0.png",
     "static/media/micy.mp4": "/portfolio/static/media/micy.723f466efb6e2a6b6e00.mp4",
     "static/media/rpg.png": "/portfolio/static/media/rpg.0ba8203dca9c5c0b1674.png",
-    "static/media/CV-English.pdf": "/portfolio/static/media/CV-English.8855934c16cc8e7d6f7d.pdf",
+    "static/media/CV-English.pdf": "/portfolio/static/media/CV-English.7e04ad17b9d81a93325b.pdf",
     "static/media/divider-upside.svg": "/portfolio/static/media/divider-upside.bdcdd12ca3a685765d0f592fbb011676.svg",
     "static/media/divider.svg": "/portfolio/static/media/divider.0de7d81415bc29a5cc66c9d881e9626d.svg",
     "index.html": "/portfolio/index.html",
     "main.d61c5d64.css.map": "/portfolio/static/css/main.d61c5d64.css.map",
-    "main.14554321.js.map": "/portfolio/static/js/main.14554321.js.map",
+    "main.144f250a.js.map": "/portfolio/static/js/main.144f250a.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d61c5d64.css",
-    "static/js/main.14554321.js"
+    "static/js/main.144f250a.js"
   ]
 }
