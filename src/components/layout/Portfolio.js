@@ -53,7 +53,7 @@ function Portfolio() {
 					<ItemContainer key={index} item={item} index={index} />
 				))}
 			</div>
-			<div className="heading-smaller"> - PAGE TEMPLATES -</div>
+			<div className="heading-smaller"> -   DESIGN (PAGE TEMPLATES) -</div>
 			<div
 				className={
 					templateData.templates.length <= 2
